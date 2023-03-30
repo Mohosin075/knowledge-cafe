@@ -1,5 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700&family=Inter:wght@400;600&family=Lobster&family=Montserrat:wght@200;400;500&family=Nunito:wght@400;500;600;800&family=Open+Sans&family=Poppins:wght@500&family=Work+Sans:wght@400;600&display=swap');
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Exo 2', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
