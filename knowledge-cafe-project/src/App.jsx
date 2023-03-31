@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Carts from "./components/Carts/Carts";
 import Bookmarks from "./components/Bookmarks/Bookmarks";
 import Bookmark from "./components/Bookmark/Bookmark";
+import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [time, setTime] = useState(0);
@@ -19,9 +20,19 @@ function App() {
   }, []);
 
   const handleBookMarks = (id) => {
-    const bookItem = carts.find(cart=>cart.id===id);
-    setBookmark([...bookmarks, bookItem])
-    setLengthCount(bookmarks.length + 1)
+    const bookItem = carts.find((cart) => cart.id === id);
+    const exist = bookmarks.find((mark) => mark.id === id);
+    if (!exist) {
+      setBookmark([...bookmarks, bookItem]);
+      setLengthCount(bookmarks.length + 1);
+      toast.success('added successfully!', {
+        position: toast.POSITION.TOP_RIGHT
+    })
+    } else {
+      toast.error('Already Exist!', {
+        position: toast.POSITION.TOP_RIGHT
+    });
+    }
   };
   const handleMarkRead = (id) => {
     const clickedItem = carts.find((cart) => cart.id === id);
@@ -44,13 +55,13 @@ function App() {
           ))}
         </div>
         <div className="lg:w-4/12">
-          <div>
-          <Bookmarks time={time} lengthCount={lengthCount}></Bookmarks>
-          <div className="p-7 bg-[#F3F3F3]">
-            {bookmarks.map((cart, index) => (
-              <Bookmark cart={cart} key={index}></Bookmark>
-            ))}
-          </div>
+          <div className="sticky top-1">
+            <Bookmarks time={time} lengthCount={lengthCount}></Bookmarks>
+            <div className="px-4 pb-2 bg-[#F3F3F3]">
+              {bookmarks.map((cart, index) => (
+                <Bookmark cart={cart} key={index}></Bookmark>
+              ))}
+            </div>
           </div>
         </div>
       </div>

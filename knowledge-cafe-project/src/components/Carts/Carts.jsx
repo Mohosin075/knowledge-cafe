@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
 const Carts = (props) => {
   // console.log(props);
@@ -37,6 +39,7 @@ const Carts = (props) => {
             <p className="text-gray-500 flex items-center  text-sm lg:text-xl">
               {watch} min read
                 <button onClick={()=>handleBookMarks(id)}><FontAwesomeIcon className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer ps-5 hover:text-green-500" icon={faBookmark} /></button>
+                <ToastContainer />
             </p>
           </div>
         </div>
