@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Bookmark = () => {
+const Bookmark = ({cart}) => {
     return (
             <div className='bg-white p-5 mb-4 rounded text-[#111111] font-semibold'>
-                    <h1>Master Microsoft Power Platform and Become an In-Demand!</h1>
-                </div>
+                    <h1>{cart.title}</h1>
+            </div>
     );
 };
 
