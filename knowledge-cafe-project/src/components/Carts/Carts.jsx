@@ -3,8 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Carts = (props) => {
-  console.log(props);
+  // console.log(props);
   const { id, name, title, watch, author, cover, publish } = props.cart;
+  const handleMarkRead = props.handleMarkRead;
+  const handleBookMarks = props.handleBookMarks;
+  // console.log(handleMarkRead);
+
   return (
     <div className="card w-full bg-base-100 mb-10">
       <figure className="h-auto xl:h-96">
@@ -31,10 +35,8 @@ const Carts = (props) => {
           </div>
           <div className="">
             <p className="text-gray-500 flex items-center  text-sm lg:text-xl">
-              {watch} min read{""}
-              <span >
-                <FontAwesomeIcon className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer ps-5 hover:text-green-500" icon={faBookmark} />
-              </span>
+              {watch} min read
+                <button onClick={()=>handleBookMarks(id)}><FontAwesomeIcon className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer ps-5 hover:text-green-500" icon={faBookmark} /></button>
             </p>
           </div>
         </div>
@@ -43,7 +45,7 @@ const Carts = (props) => {
           <div className="badge">#beginners</div>
           <div className="badge">#programming</div>
         </div>
-        <button className="text-start text-[#6047EC] text-lg lg:text-xl underline my-3 lg:mt-7">
+        <button onClick={()=>handleMarkRead(id)} className="text-start text-[#6047EC] text-lg lg:text-xl underline my-3 lg:mt-7">
           Mark as read
         </button>
       </div>
