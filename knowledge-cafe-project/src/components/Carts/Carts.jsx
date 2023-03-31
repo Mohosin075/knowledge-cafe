@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Carts = (props) => {
   console.log(props);
@@ -15,24 +17,35 @@ const Carts = (props) => {
       <div className="card-body">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <div className="w-16 h-16">
-              <img className="w-full h-full bg-center bg-cover rounded-full" src={author} alt="" />
+            <div className="w-8 h-8 lg:w-16 lg:h-16">
+              <img
+                className="w-full h-full bg-center bg-cover rounded-full"
+                src={author}
+                alt=""
+              />
             </div>
-            <div className="ps-7">
-              <h3 className="text-2xl font-bold">{name}</h3>
-              <p className="text-gray-500">{publish}</p>
+            <div className="ps-4 lg:ps-7">
+              <h3 className="text-lg lg:text-2xl font-bold">{name}</h3>
+              <p className="text-gray-500 text-sm lg:text-xl">{publish}</p>
             </div>
           </div>
-          <div>
-            <p className="text-gray-500">{watch} min read <span>bookmark</span></p>
+          <div className="">
+            <p className="text-gray-500 flex items-center  text-sm lg:text-xl">
+              {watch} min read{""}
+              <span >
+                <FontAwesomeIcon className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer ps-5 hover:text-green-500" icon={faBookmark} />
+              </span>
+            </p>
           </div>
         </div>
-        <h2 className="text-4xl font-bold my-4">{title}</h2>
+        <h2 className="text-xl lg:text-4xl font-bold my-2 lg:my-4">{title}</h2>
         <div className="card-actions justify-start">
           <div className="badge">#beginners</div>
           <div className="badge">#programming</div>
         </div>
-        <button className="text-start text-[#6047EC] text-xl underline mt-7">Mark as read</button>
+        <button className="text-start text-[#6047EC] text-lg lg:text-xl underline my-3 lg:mt-7">
+          Mark as read
+        </button>
       </div>
       <hr className="border-gray-300" />
     </div>

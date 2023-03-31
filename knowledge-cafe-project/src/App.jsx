@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Carts from "./components/Carts/Carts";
 import Bookmarks from "./components/Bookmarks/Bookmarks";
 
+
 function App() {
   const [count, setCount] = useState(0);
   const [carts, setCarts] = useState([]);
@@ -20,8 +21,8 @@ function App() {
     <div className="App">
       <Header></Header>
       <hr />
-      <div className="flex gap-6 justify-between  py-5">
-        <div className='w-8/12'>
+      <div className="lg:flex gap-8 justify-between  py-5">
+        <div className='lg:w-8/12'>
           {carts.map((cart) => (
             <Carts cart={cart} key={cart.id}></Carts>
           ))}
@@ -31,5 +32,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
