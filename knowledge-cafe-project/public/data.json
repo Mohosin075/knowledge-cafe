@@ -6,7 +6,7 @@
     "cover": "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2dyYW1taW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "name": "Linda Logan",
     "title": "What are the concepts introduced in OOPs?",
-    "publish-data": "25/03/2023"
+    "publish": "25/03/2023"
   },
   {
     "id": "2",
@@ -15,7 +15,7 @@
     "cover": "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     "name": "Peggy Coleman",
     "title": "Explain what a Binary Search Tree is.",
-    "publish-data": "02/12/2022"
+    "publish": "02/12/2022"
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
     "cover": "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     "name": "Estrada William",
     "title": "How does variable declaration affect memory?",
-    "publish-data": "25/11/2023"
+    "publish": "25/11/2023"
   },
   {
     "id": "4",
@@ -33,7 +33,7 @@
     "cover": "https://images.unsplash.com/photo-1521185496955-15097b20c5fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2dyYW1taW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "name": "Lottie Mullen",
     "title": "How do you reverse a string in Java?",
-    "publish-data": "18/05/2020"
+    "publish": "18/05/2020"
   },
   {
     "id": "5",
@@ -42,6 +42,6 @@
     "cover": "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2dyYW1taW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "name": "Callahan Poole",
     "title": "Find the number of occurrences of a character in a String?",
-    "publish-data": "10/09/2022"
+    "publish": "10/09/2022"
   }
 ]
