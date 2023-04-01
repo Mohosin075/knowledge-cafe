@@ -10,7 +10,9 @@ const Blogs = () => {
                 <h3  className="text-xl md:text-2xl font-bold">(1) Props vs state</h3>
                 <div  className="text-sm md:text-xl py-3">
                     <p  className="py-2"><span  className="text-xl font-semibold">Props :</span> <br />  
-                    props and state are used to manage data and information within a component in React. props are read-only and passed down from a parent component to configure a component's behavior and appearance. state is used to manage a component's internal data, can be modified by the component, and triggers re-renders to update the user interface.</p>
+                    props and state are used to manage data and information within a component in React. props are read-only and passed down from a parent component to configure a component's behavior and appearance. <br />
+                    <span  className="text-xl font-semibold">State :</span> <br />  
+                    state is used to manage a component's internal data, can be modified by the component, and triggers re-renders to update the user interface.</p>
                 </div>
             </div>
             <div  className="mb-10">

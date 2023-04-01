@@ -8,18 +8,20 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Questions from "./components/Blogs/Blogs";
+import Blogs from "./components/Blogs/Blogs";
 
 function App() {
   const [time, setTime] = useState(0);
   const [carts, setCarts] = useState([]);
   const [bookmarks, setBookmark] = useState([]);
   const [lengthCount, setLengthCount] = useState(0);
+  // fetch JSON data and store data in setCarts
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setCarts(data));
   }, []);
-
+  // handle bookmark ==> when click bookmark icon then store clicked item
   const handleBookMarks = (id) => {
     const bookItem = carts.find((cart) => cart.id === id);
     const exist = bookmarks.find((mark) => mark.id === id);
@@ -35,17 +37,18 @@ function App() {
     });
     }
   };
+    // handle mark as read ==> when click mark as read - then update total watch time
   const handleMarkRead = (id) => {
     const clickedItem = carts.find((cart) => cart.id === id);
     setTime(time + clickedItem.watch);
   };
-
   return (
     <div className="App">
       <Header></Header>
       <hr />
       <div className="lg:flex gap-8 justify-between  py-5">
         <div className="lg:w-8/12">
+          {/* data pass in carts components */}
           {carts.map((cart) => (
             <Carts
               cart={cart}
@@ -59,6 +62,7 @@ function App() {
           <div className="sticky top-1">
             <Bookmarks time={time} lengthCount={lengthCount}></Bookmarks>
             <div className="px-4 pb-2 bg-[#F3F3F3]">
+              {/* data pass in bookmark components */}
               {bookmarks.map((cart, index) => (
                 <Bookmark cart={cart} key={index}></Bookmark>
               ))}
@@ -66,7 +70,8 @@ function App() {
           </div>
         </div>
       </div>
-      <Questions></Questions>
+      {/* blogs components for some important question */}
+      <Blogs></Blogs>
     </div>
   );
 }

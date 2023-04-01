@@ -5,11 +5,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
 const Carts = (props) => {
-  // console.log(props);
   const { id, name, title, watch, author, cover, publish } = props.cart;
   const handleMarkRead = props.handleMarkRead;
   const handleBookMarks = props.handleBookMarks;
-  // console.log(handleMarkRead);
 
   return (
     <div className="card w-full bg-base-100 mb-10">

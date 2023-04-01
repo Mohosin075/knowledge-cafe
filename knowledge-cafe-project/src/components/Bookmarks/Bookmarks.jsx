@@ -1,5 +1,4 @@
 import React from 'react';
-import Bookmark from '../Bookmark/Bookmark';
 
 const Bookmarks = ({time, lengthCount}) => {
     return (
