@@ -20,7 +20,7 @@ const Carts = (props) => {
           alt="Shoes"
         />
       </figure>
-      <div className="card-body">
+      <div className="py-7 px-1">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <div className="w-8 h-8 lg:w-16 lg:h-16">
